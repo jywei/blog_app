@@ -26,3 +26,21 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+Blog-App
+
+- Articles
+  - ID
+  - Titles
+  -Body
+
+- Users
+  - ID
+  - Email
+  - Password
+
+- Comments
+  - ID
+  - Body
+  - User_ID
+  - Article_ID
