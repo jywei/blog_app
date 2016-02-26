@@ -46,7 +46,7 @@ guard :rspec, cmd: "rspec" do
   dsl.watch_spec_files_for(rails.views)
 
   watch(%r{^app/controllers/(.+)_(controller)\.rb$}) { "spec/features" }
-  watch(%r{^app/models/(.+)\.rb$}) { "spec/features"}
+  watch(%r{^app/models/(.+)\.rb$}) { "spec/features" }
   watch(rails.controllers) do |m|
     [
       rspec.spec.("routing/#{m[1]}_routing"),
@@ -57,11 +57,11 @@ guard :rspec, cmd: "rspec" do
 
   # Rails config changes
   watch(rails.spec_helper)     { rspec.spec_dir }
-  watch(rails.routes)          { "spec" } # { "#{rspec.spec_dir}/routing" }
+  watch(rails.routes)          { "spec" }
   watch(rails.app_controller)  { "#{rspec.spec_dir}/controllers" }
 
   # Capybara features specs
-  watch(rails.view_dirs)     { "spec/features" } # { |m| rspec.spec.("features/#{m[1]}") }
+  watch(rails.view_dirs)     { "spec/features" }
   watch(rails.layouts)       { |m| rspec.spec.("features/#{m[1]}") }
 
   # Turnip features and steps
