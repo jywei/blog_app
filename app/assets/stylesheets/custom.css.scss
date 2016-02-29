@@ -26,7 +26,7 @@ body {
 }
 
 .article-detail-title {
-  fond-size: 4em;
+  fond-size: 5em;
   margin-bottom: 40px;
 }
 
@@ -70,5 +70,15 @@ body {
   padding-top: 15px;
   padding-left: 15px;
   font-style: italic;
+}
+
+.comment-body {
+  font-size: 1.5em;
+  margin-left: 2em;
+}
+
+.comment-time {
+  font-style: italic;
+  font-size: 1em;
 }
 
